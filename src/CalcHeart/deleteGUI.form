@@ -63,7 +63,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="427f6" class="javax.swing.JButton" binding="ΔΙΑΓΡΑΦΗButton" default-binding="true">
+              <component id="427f6" class="javax.swing.JButton" binding="DeleteBtn">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -72,7 +72,7 @@
                   <text value="ΔΙΑΓΡΑΦΗ"/>
                 </properties>
               </component>
-              <component id="a8f1c" class="javax.swing.JButton" binding="ΚΑΘΑΡΙΣΜΟΣButton" default-binding="true">
+              <component id="a8f1c" class="javax.swing.JButton" binding="clearBtn">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>

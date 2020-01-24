@@ -8,8 +8,8 @@ import java.sql.*;
 public class deleteGUI extends JFrame{
     private JPanel panel;
     private JTextField deleteTextField;
-    private JButton ΔΙΑΓΡΑΦΗButton;
-    private JButton ΚΑΘΑΡΙΣΜΟΣButton;
+    private JButton DeleteBtn;
+    private JButton clearBtn;
 
     public deleteGUI() {
 
@@ -18,13 +18,13 @@ public class deleteGUI extends JFrame{
         this.setContentPane(panel);
         setLocationRelativeTo(null);
         this.pack();
-        ΚΑΘΑΡΙΣΜΟΣButton.addActionListener(new ActionListener() {
+        clearBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 deleteTextField.setText("");
             }
         });
-        ΔΙΑΓΡΑΦΗButton.addActionListener(new ActionListener() {
+        DeleteBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String url =  "jdbc:mysql://localhost:3306/calcHeart?serverTimezone=UTC&characterEncoding=UTF-8";
@@ -37,7 +37,6 @@ public class deleteGUI extends JFrame{
                     Connection myConn = DriverManager.getConnection(url, user, pass);
                     String del = deleteTextField.getText();
                     String query = "DELETE FROM calcHeart WHERE EPONIMO = ?";
-                    //myConn.prepareStatement(query);
                     PreparedStatement stmt=myConn.prepareStatement(query);
                     stmt.setString(1,del);
                     int choice = JOptionPane.showConfirmDialog(new JFrame(),
